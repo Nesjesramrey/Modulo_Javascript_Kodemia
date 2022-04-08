@@ -1,6 +1,6 @@
 # Kodemia - Conditional - Sesion 03
 
-This is a solution to the two exercises about sesion 2 
+This is a solution to the two exercises about sesion 3 
 
 ## Table of contents
 
