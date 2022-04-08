@@ -8,6 +8,8 @@ This is a solution to the two exercises about sesion 3
 - Exercise 2 compare-numbers and aritmethic
 - Exercise 2 par or impar
 - Exercise 2 your height in Mars
+- Homework 1
+- Homework 2
 
 ![](/03_sesion/sesion_03.png)
 
