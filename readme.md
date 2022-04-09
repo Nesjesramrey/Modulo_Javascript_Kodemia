@@ -11,6 +11,8 @@ This is a solution to the two exercises about sesion 3
 - Homework 1
 - Homework 2
 
+![](/03_sesion/homework1.png)
+![](/03_sesion/homework2.png)
 ![](/03_sesion/sesion_03.png)
 
 

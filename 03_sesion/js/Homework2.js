@@ -10,7 +10,7 @@
 
 
 
-let amount = prompt("¿Que cantidad deseas convertir?");
+let amount = prompt("¿Cual es cantidad que deseas convertir?");
 let origin = prompt("¿De que pais viajas?" 
                             +" 1.Mexico"
                             +" 2.Colombia"
@@ -32,11 +32,11 @@ function changes(x,y,z) {
   } else if (y == 3 && z == 4) {
     console.log("Tu tienes "+x/112.18+" dolares");
   } else if (y == 4 && z == 1) {
-    console.log("Tu tienes "+x/20.05+" pesos");
-  } else if (y == 4 && z == 1) {
-    console.log("Tu tienes "+x/3764.34+" pesos");
-  } else if (y == 4 && z == 1) {
-    console.log("Tu tienes "+x/112.18+" pesos");
+    console.log("Tu tienes "+x*20.05+" pesos");
+  } else if (y == 4 && z == 2) {
+    console.log("Tu tienes "+x*3764.34+" pesos");
+  } else if (y == 4 && z == 3) {
+    console.log("Tu tienes "+x*112.18+" pesos");
   } 
   else {
     console.log("Ingresa un numero correcto");

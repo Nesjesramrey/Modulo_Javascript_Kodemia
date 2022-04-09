@@ -10,27 +10,30 @@
 // < 90 calificacion B
 // < 100 calificacion A
 
-let calification = prompt("Ingresa una calificacion");
-calification = Number(calification);
+let calification = Number(prompt("Ingresa una calificacion"));
+
+
 
 function evaluation(x) {
   if (x >= 90 && x <= 100) {
-    console.log(A);
+    return "A";
   } else if (x >= 80 && x < 90) {
-    console.log("B");
+    return "B";
   } else if (x >= 70 && x < 80) {
-    console.log("C");
+    return "C";
   } else if (x >= 60 && x < 70) {
-    console.log("D");
+    return "D";
   } else {
-    console.log("F");
+    return "F";
   }
 }
 
-evaluation(calification)
+evaluation(calification);
 
+let result = evaluation(calification);
+console.log(result);
 
-switch (evaluation) {
+switch (result) {
   case "A":
     console.log("La calificacion es A excelente");
     break;
