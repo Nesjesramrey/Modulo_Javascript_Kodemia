@@ -8,7 +8,7 @@ This is a solution the exercises about sesion 4
 - Exercise 2 compare-numbers and aritmethic
 
 
-![](/03_sesion/homework1.png)
+![](/04_sesion/Exercise.png)
 # Kodemia - Conditional - Sesion 03
 
 This is a solution to the two exercises about sesion 3 
