@@ -1,3 +1,14 @@
+# Kodemia - Conditional - Sesion 04
+
+This is a solution the exercises about sesion 4
+
+## Table of contents
+
+- Exercise 1 compare-letters
+- Exercise 2 compare-numbers and aritmethic
+
+
+![](/03_sesion/homework1.png)
 # Kodemia - Conditional - Sesion 03
 
 This is a solution to the two exercises about sesion 3 
