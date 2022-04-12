@@ -6,7 +6,7 @@ This is a solution the exercises about sesion 5
 
 
 
-![](/04_sesion/Exercise1y2.png)
+![](/05_sesion/Exercises.png)
 
 # Kodemia - Conditional - Sesion 04
 
