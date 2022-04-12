@@ -1,3 +1,13 @@
+# Kodemia - Conditional - Sesion 05
+
+This is a solution the exercises about sesion 5
+
+## Table of contents
+
+
+
+![](/04_sesion/Exercise1y2.png)
+
 # Kodemia - Conditional - Sesion 04
 
 This is a solution the exercises about sesion 4
