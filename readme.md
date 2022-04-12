@@ -1,4 +1,4 @@
-# Kodemia - Conditional - Sesion 05
+# Kodemia - Functions - Sesion 05
 
 This is a solution the exercises about sesion 5
 
@@ -6,9 +6,9 @@ This is a solution the exercises about sesion 5
 
 
 
-![](/05_sesion/Exercises.png)
+![](/05_sesion/img/Exercises.js.png)
 
-# Kodemia - Conditional - Sesion 04
+# Kodemia - Compare Operators - Sesion 04
 
 This is a solution the exercises about sesion 4
 
