@@ -1,4 +1,4 @@
-# Kodemia - Functions - Sesion 06
+# Kodemia - Ciclos - Sesion 06
 
 This is a solution the exercises about sesion 6
 
