@@ -10,7 +10,7 @@ Tuve dos problemas:
 2. En la segunda aun tengo que generar el array ya que genere la cadena de texto y eso solo me devuelve una caracter
 
 
-![](/06_sesion/06_sesion.png)
+![](/06_sesion/img/06_sesion.png)
 
 # Kodemia - Functions - Sesion 05
 
