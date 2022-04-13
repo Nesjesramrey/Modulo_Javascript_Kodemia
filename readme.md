@@ -1,3 +1,17 @@
+# Kodemia - Functions - Sesion 06
+
+This is a solution the exercises about sesion 6
+
+## Comments
+
+Tuve dos problemas:
+
+1. Duplique la suma al ocupar el ++ en la solucion 
+2. En la segunda aun tengo que generar el array ya que genere la cadena de texto y eso solo me devuelve una caracter
+
+
+![](/06_sesion/06_sesion.png)
+
 # Kodemia - Functions - Sesion 05
 
 This is a solution the exercises about sesion 5

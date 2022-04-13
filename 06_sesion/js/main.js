@@ -88,7 +88,7 @@ function numberRandom(randomNumber) {
   
 }
 
-numberRandom(number1)
+numberRandom(number1)  //aun queda pendiente como generar la separacion del array ya que de momento solo genera un solo codigo
 
 // Ejercicio 2:
 // Pedir al usuario usuario un numero entre 1 y 10
