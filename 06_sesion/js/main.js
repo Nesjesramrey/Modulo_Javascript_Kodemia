@@ -46,7 +46,7 @@ for (let index = 0; index < personas.length; index++){
     console.log(personas[index])
 }
 
-let palabra = prompt('Inserta una palabra');
+//let palabra = prompt('Inserta una palabra');
 
 function convertirPalabra(palabraParaConvertir){
 
@@ -62,7 +62,7 @@ function convertirPalabra(palabraParaConvertir){
     console.log(result)
 }
 
-convertirPalabra(palabra);
+//convertirPalabra(palabra);
 
 // Ejercicio 1:
 // Solicitar al usuario ingresar un numero
@@ -71,7 +71,7 @@ convertirPalabra(palabra);
 // input : 6
 // output: ‘6AQX>H’
 
-let number1 = prompt("Ingresa un numero");
+//!let number1 = prompt("Ingresa un numero");
 
 function numberRandom(randomNumber) {
   let result2 = "";
@@ -88,7 +88,7 @@ function numberRandom(randomNumber) {
   
 }
 
-numberRandom(number1)  //aun queda pendiente como generar la separacion del array ya que de momento solo genera un solo codigo
+// numberRandom(number1)  //aun queda pendiente como generar la separacion del array ya que de momento solo genera un solo codigo
 
 // Ejercicio 2:
 // Pedir al usuario usuario un numero entre 1 y 10
@@ -97,7 +97,7 @@ numberRandom(number1)  //aun queda pendiente como generar la separacion del arra
 // 3 x 1 = 3
 // 3 x 2 = 6
 
-let numberOne = Number(prompt("Ingresa un numero"));
+//!let numberOne = Number(prompt("Ingresa un numero"));
 
 function tablas(number2) {
   for (let index = 1; index <= 10; index++) {
@@ -105,4 +105,24 @@ function tablas(number2) {
   }
 }
 
-tablas(numberOne);
+// tablas(numberOne);
+
+// Agregas un numero que genera un numero aleatorio de su dimension y despues devuelve una cade de caracteres
+
+let longitudDeString = prompt('ingrese un numero');
+function generarCaracter() {
+    let codigoCaracter = Math.floor(Math.random() * (126 - 33)) + 33;
+    let caracter = String.fromCharCode(codigoCaracter);
+    return caracter;
+  }
+  
+  function generarString(longitud) {
+    let stringResult = "";
+    for (let index = 0; index < longitud; index++) {
+      stringResult += generarCaracter();
+    }
+    return stringResult;
+  }
+
+  console.log(generarString(longitudDeString));
+  
