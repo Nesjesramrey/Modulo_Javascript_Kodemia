@@ -37,8 +37,9 @@ imprimePares(numberUser)
 
 let serie =prompt("Ingresa una cantidad")
 // Split y array
-let serieSplit = serie.split("").map(Number)
-//console.log(serieSplit)
+let serieSplit = serie.split("").map(Number) //map lo que hace es que recorre (mapea) el array y le aplica a cada elemento lo que estemos haciendo en este caso pasarlos a numeros
+
+//console.log(serieSplit) lo oucpe para revisar lo que hacia
 
 function plusSerie(array){
     let sum = 0;
