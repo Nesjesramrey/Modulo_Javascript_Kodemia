@@ -1,3 +1,13 @@
+# Kodemia - Ciclos - Sesion 07
+
+This is a solution the exercises about sesion 7
+
+## Comments
+
+
+
+![](/07_sesion/img/07_sesion.png)
+
 # Kodemia - Ciclos - Sesion 06
 
 This is a solution the exercises about sesion 6
