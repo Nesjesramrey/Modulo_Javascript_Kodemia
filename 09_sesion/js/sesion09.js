@@ -160,8 +160,6 @@ mentor.scores.forEach((score, index, arr) =>{
 )
 })
 
-
-
 console.log(`El promedio de Ivan es: ${Ivan/4}`)
 console.log(`El promedio de Alejandra es: ${Alejandra/4}`)
 console.log(`El promedio de Alan es: ${Alan/4}`)
