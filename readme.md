@@ -1,3 +1,23 @@
+# Kodemia - forEach - Sesion 09
+
+This is a solution the exercises about sesion 9
+
+## Comments
+
+
+
+![](/09_sesion/img/09_sesion.png)
+
+# Kodemia - Ciclos For - Sesion 08
+
+This is a solution the exercises about sesion 8
+
+## Comments
+
+
+
+![](/07_sesion/img/07_sesion.png)
+
 # Kodemia - Ciclos - Sesion 07
 
 This is a solution the exercises about sesion 7

@@ -108,14 +108,17 @@ const generacion18 = [
 // output: ["Js", "HTML", "React"];
 
 
-function FiltrarPorKoder (){
-    
+function FiltrarPorKoder(){
+    let result = "";
     let koder = "Freddy"
     for (let index = 0; index < generacion18.length; index++){
-      if (koder === generacion18[index].koders[1]){
+      for(let index = 0; index <= generacion18[index].koders.length; index++){
+      if (koder === generacion18[index].koders[index]){
         console.log(generacion18[index].signature)
       }
-        
+      result += generacion18[index].signature
+      }
+    return result
     }
 }
  FiltrarPorKoder()
@@ -127,29 +130,29 @@ function FiltrarPorKoder (){
 
 // filtrarPorMateria()
 
-let nombres = []
-const saludar = (name) => {
-  nombres.push(name)
-};
+// let nombres = []
+// const saludar = (name) => {
+//   nombres.push(name)
+// };
 
-saludar('ivan')
-
-
+// saludar('ivan')
 
 
-const filtrarPorMateria = (materia) => {
-    let result = '';
 
-    for (let index = 0; index < generacion18.length; index++) {
-      if(materia === generacion18[index].signature) {
-         result = generacion18[index];
-      }
-    }
 
-    return result;
-};
+// const filtrarPorMateria = (materia) => {
+//     let result = '';
 
-console.log(filtrarPorMateria('Js'))
+//     for (let index = 0; index < generacion18.length; index++) {
+//       if(materia === generacion18[index].signature) {
+//          result = generacion18[index];
+//       }
+//     }
+
+//     return result;
+// };
+
+// console.log(filtrarPorMateria('Js'))
 
 
 // un callback es una function que es enviada como parametro a otra funcion
@@ -184,13 +187,13 @@ console.log(filtrarPorMateria('Js'))
 // for each 
 // Ejecuta el callback por cada elemento del arreglo 
 
-const numeros = [ 2, 4, 5];
+// const numeros = [ 2, 4, 5];
 
-let resultado = 0
+// let resultado = 0
 
-numeros.forEach(( item, index, arr ) => console.log(index))
+// numeros.forEach(( item, index, arr ) => console.log(index))
 
-console.log(resultado)
+// console.log(resultado)
 
 
 
@@ -198,22 +201,22 @@ console.log(resultado)
 
 
 //  parametros nombrados
-function informacionPersona({ nombre, apellido, curp, rfc, fechaNacimiento, direccion, edad, sexo }){
+// function informacionPersona({ nombre, apellido, curp, rfc, fechaNacimiento, direccion, edad, sexo }){
 
-  return {
-    nombre: nombre,
-    apellido: apellido,
-    curp: curp,
-    rfc: rfc,
-    fechaNacimiento: fechaNacimiento,
-    direccion: direccion,
-    edad: edad,
-    sexo: sexo,
-  }
+//   return {
+//     nombre: nombre,
+//     apellido: apellido,
+//     curp: curp,
+//     rfc: rfc,
+//     fechaNacimiento: fechaNacimiento,
+//     direccion: direccion,
+//     edad: edad,
+//     sexo: sexo,
+//   }
 
-}
+// }
 
-informacionPersona({ curp: 'DIAI989s', nombre:'ivan', fechaNacimiento: 'ter' })
+// informacionPersona({ curp: 'DIAI989s', nombre:'ivan', fechaNacimiento: 'ter' })
 
 
 // destructuring 
@@ -234,7 +237,20 @@ informacionPersona({ curp: 'DIAI989s', nombre:'ivan', fechaNacimiento: 'ter' })
 //   'koder 3: Freddy Krueger',
 // ]
 
+// let students = [
+//  'Jason Vorhees',
+//    'Penny Wise',
+//    'Freddy Krueger',
+//  ]
 
+// let user =[];
+// let num = 1
+// students.forEach((item, index, arr)=>{
+//    info = ('koder'+ num++ +':'+item);
+//    user.push(info);
+//  })
+
+//  console.log(user);
 
 // input:
 // [
