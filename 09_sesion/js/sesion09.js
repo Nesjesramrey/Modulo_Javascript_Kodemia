@@ -107,6 +107,8 @@ const mentorsArray = [
 // }
 // )
 // })
+
+
 // let HTML = 0;
 // let CSS = 0;
 // let JS = 0;
@@ -133,10 +135,12 @@ const mentorsArray = [
 
 
 // console.log(`El promedio de HTML es: ${HTML/4}`)
-// console.log(`El promedio de HTML es: ${CSS/4}`)
-// console.log(`El promedio de HTML es: ${JS/4}`)
-// console.log(`El promedio de HTML es: ${ReactJS/4}`)
+// console.log(`El promedio de CSS es: ${CSS/4}`)
+// console.log(`El promedio de JS es: ${JS/4}`)
+// console.log(`El promedio de ReacJS es: ${ReactJS/4}`)
 
+
+//todo Primer intento
 let Ivan = 0;
 let Alejandra = 0;
 let Alan = 0;
@@ -160,8 +164,53 @@ mentor.scores.forEach((score, index, arr) =>{
 )
 })
 
-console.log(`El promedio de Ivan es: ${Ivan/4}`)
-console.log(`El promedio de Alejandra es: ${Alejandra/4}`)
-console.log(`El promedio de Alan es: ${Alan/4}`)
-console.log(`El promedio de Oscar es: ${Oscar/4}`)
+console.log(`El promedio de ${mentorsArray[0].name} es: ${Ivan/4}`)
+console.log(`El promedio de ${mentorsArray[1].name} es: ${Alejandra/4}`)
+console.log(`El promedio de ${mentorsArray[2].name} es: ${Alan/4}`)
+console.log(`El promedio de ${mentorsArray[3].name} es: ${Oscar/4}`)
 
+
+// function avgMentors (Array){
+//     let Ivan = 0;
+//     let Alejandra = 0;
+//     let Alan = 0;
+//     let Oscar = 0;
+//       Array.forEach((item, index,) => {
+//           if(item.name === "Ivan"){
+//           item.scores.forEach((scores) => {
+              
+//               Ivan += scores.score;
+//           })
+//         }
+//         if(item.name === "Alejandra"){
+//             item.scores.forEach((scores) => {
+                
+//                 Alejandra += scores.score;
+//             })
+//           }
+//           if(item.name === "Alan"){
+//             item.scores.forEach((scores) => {
+                
+//                 Alan += scores.score;
+//             })
+//           }
+//           if(item.name === "Oscar"){
+//             item.scores.forEach((scores) => {
+                
+//                 Oscar += scores.score;
+//             })
+//           }
+    
+//         })
+//     avgIvan = Ivan/4;
+//     avgAlejandra = Alejandra/4;
+//     avgAlan = Alan/4;
+//     avgOscar = Oscar/4;
+//     let arrResumed = [];
+//     arrResumed += {name: mentorsArray.name, average: avgIvan }
+//     console.log(arrResumed)
+    
+    
+//     }
+    
+//     avgMentors(mentorsArray) 
