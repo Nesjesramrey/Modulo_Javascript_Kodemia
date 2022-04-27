@@ -88,7 +88,7 @@ const mentorsArray = [
 
   function getAllAvgMentors (mentors){
     let arrayMentors = [];
-  mentors.forEach((mentor, index,) => {
+  mentors.forEach((mentor) => {
     let totalMentor = 0
     let numSignature = mentor.scores.length
       mentor.scores.forEach((score) => {
