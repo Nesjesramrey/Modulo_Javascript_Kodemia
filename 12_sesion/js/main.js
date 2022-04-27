@@ -231,17 +231,40 @@ const mentorsArray = [
 
 //     console.log(namesMentors);
 
-const namesMentors = mentorsArray.map((mentor) => {
-  let listMentors = [];
-  let nameSplit = mentor.name.split(" ")
-  //console.log(nameSplit)
-  nameSplit.forEach((name) => {
-    listMentors += name[0][0]
-    // console.log(listMentors)
-  })
-  // console.log(nameSplit[0][0],nameSplit[1][0],nameSplit[2][0]);
-  return listMentors
-  
-});
 
-console.log(namesMentors)
+//tarea mi solucion
+// const namesMentors = mentorsArray.map((mentor) => {
+//   let listMentors = [];
+//   let nameSplit = mentor.name.split(" ")
+//   console.log(nameSplit)
+//   nameSplit.forEach((name) => {
+//     listMentors += name[0]
+//      console.log(listMentors)
+//     console.log(name[0])
+//   })
+//    console.log(nameSplit[0][0],nameSplit[1][0],nameSplit[2][0]);
+//   return listMentors
+  
+// });
+
+// console.log(namesMentors)
+
+
+//Ejercicio en clase
+const formatearNombre = (mentores) => {
+  const result = mentores.map((item) => {
+    const arrayName = item.name.split(' ');
+    let accum ='';
+    arrayName.map((firstLetter) => {
+      
+      accum += firstLetter.charAt(0) + "."
+    })
+    //console.log(accum)
+    return accum;
+  })
+  //console.log(result)
+  return result
+}
+
+const formatted = formatearNombre(mentorsArray)
+console.log(formatted)
