@@ -157,7 +157,7 @@ const koders = [
 
 function Koder (age, promedio, name, lastname, bootcamp){
     this.age = age;
-    this.generation = promedio;
+    this.promedio = promedio;
     this.name = name;
     this.lastname = lastname;
     this.bootcamp = bootcamp;
@@ -166,8 +166,51 @@ function Koder (age, promedio, name, lastname, bootcamp){
 // const persona1 = new Koder("18","9","nestor", "ramirez", "generacion")
 // console.log(persona1)
 
-koders.map((item) =>{
-    console.log(item.birthday)
-
-
+function getAge (date){
+  let ageKoder =[];
+  date.forEach((item) =>{    
+  let birthdays = new Date(item.birthday);
+  //console.log(birthdays)
+  let years = birthdays.getFullYear()
+  //console.log(years)
+  let today = new Date()
+  let yearToday = today.getFullYear()
+  let ages = yearToday - years  
+  //console.log(ages)
+  ageKoder.push(ages)  
 })
+return ageKoder
+}
+
+console.log(getAge (koders))
+
+
+koders.forEach((item)=> {
+  //console.log(item)
+  let sumScores = 0;
+  let asig = item.scores.length
+  item.scores.forEach((score) => {
+    //console.log(score.score)
+    sumScores += score.score  
+      
+  })
+  
+  //console.log(sumScores/asig)
+})
+
+koders.map((item)=>{
+  //console.log(item.name)
+})
+
+koders.map((item)=>{
+  //console.log(item.lastName)
+})
+
+
+koders.map((item)=>{
+  //console.log(item.bootcamp)
+})
+
+
+
+
