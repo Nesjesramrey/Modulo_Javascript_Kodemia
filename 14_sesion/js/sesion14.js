@@ -281,39 +281,3 @@ const koderListInstance = koders.map((koder)=>{
 
 console.log(koderListInstance)
 
-//*Sintaxis nueva para generar prototipos
-//*Usamos la palabra reservada clase y el metodo constructor
-//*declaramos los parametros en parentesis primero
-//*despues de las llaves declaramos las propiedades de la clase
-//*para agregar una funcion no necesito palabra declara con "saludar" basta el nombre y los parentesis
-
-
-class Koder2 {
-  constructor(name, lastName, age) {
-    this.name = name;
-
-  }
-  saludar(){
-    console.log(`hola soy ${this.name}`)
-  }
-}
-
-const koder2 = new Koder2 ('ivan')
-console.log(koder2)
-//*solo llamamos la funcion declarandola, sin el console.log ya que saldria undifined
-koder2.saludar()
-
-//*herencias
-//* "extends 'Nombre de clase'
-//* "super" llama al constructor para copiar las instancias
-
-class Koder3 extends Koder2 {
-  constructor(name, lastName, age, bootcamp, generation){
-    super(name, lastName, age)
-    this.bootcamp = bootcamp;
-    this.generation = generation;
-  }
-}
-
-const koder3 = new Koder3('ivan', 'diaz', 31, 'javascript',18)
-console.log(koder3)
