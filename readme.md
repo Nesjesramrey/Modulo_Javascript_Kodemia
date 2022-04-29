@@ -9,6 +9,16 @@ Prototype
 
 ![](/14_sesion/img/14_sesion.png)
 
+# Kodemia - map and filter - Sesion 12
+
+This is a solution the exercises about sesion 12
+
+## Comments
+
+
+
+![](/12_sesion/img/12_sesion.png)
+
 # Kodemia - forEach - Sesion 11
 
 This is a solution the exercises about sesion 11
