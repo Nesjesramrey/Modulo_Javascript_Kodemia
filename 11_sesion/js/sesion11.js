@@ -88,18 +88,30 @@ function songForBands(arrayBands) {
 
 //songForBands(songsData)
 
-function songMoreSounds(arrayBands) {
+
+//**Cancion con mas reproducida */
+function songWithMoreReproduction(arrayBands) {
+  let arrayReproductions= [];
   arrayBands.forEach((item) => {
-    console.log(item.band);
-  });
+  //console.log(item.statistics.reproductions)
+  arrayReproductions.push(item.statistics.reproductions)      
+});
+let maxReproductions= Math.max(...arrayReproductions)  
+return maxReproductions;
 }
 
-//songMoreSounds(songsData)
+console.log(songWithMoreReproduction(songsData))
 
+
+//**Cancion con mas likes */
 function songWithMoreLikes(arrayBands) {
+        let arrayLikes= [];
         arrayBands.forEach((item) => {
-        console.log(item.statistics)
+        //console.log(item.statistics.likes)
+        arrayLikes.push(item.statistics.likes)      
   });
+ let maxLikes= Math.max(...arrayLikes)  
+ return maxLikes;
 }
 
-songWithMoreLikes(songsData);
+console.log(songWithMoreLikes(songsData))
