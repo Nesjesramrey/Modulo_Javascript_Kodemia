@@ -9,6 +9,15 @@ Prototype
 
 ![](/14_sesion/img/14_sesion.png)
 
+# Kodemia - reduce - Sesion 13
+
+This is a solution the exercises about sesion 13
+
+## Comments
+
+
+
+![](/13_sesion/img/13_sesion.png)
 # Kodemia - map and filter - Sesion 12
 
 This is a solution the exercises about sesion 12
