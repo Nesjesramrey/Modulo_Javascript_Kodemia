@@ -1,3 +1,15 @@
+# Kodemia - forEach - Sesion 14
+
+This is a solution the exercises about sesion 9
+
+## Comments
+
+Prototype
+
+
+![](/14_sesion/img/14_sesion.png)
+
+
 # Kodemia - forEach - Sesion 09
 
 This is a solution the exercises about sesion 9
