@@ -1,3 +1,28 @@
+# Kodemia - DOM y manipulacion - Sesion 16
+
+This is a solution the exercises about sesion 16
+
+## Comments
+
+Manipulation DOM
+
+![](/16_sesion/img/HWsesion16.png)
+![](/16_sesion/img/sesion16.png)
+
+
+# Kodemia - class y herencias - Sesion 15
+
+These are the exercises about sesion 15
+
+## Comments
+
+Class, herencias
+
+
+![](/15_sesion/img/sesion15.png)
+
+
+
 # Kodemia - forEach - Sesion 14
 
 This is a solution the exercises about sesion 14
