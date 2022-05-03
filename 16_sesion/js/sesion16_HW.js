@@ -235,8 +235,19 @@ const creartTable = () => {
     } 
     if(avgMentor<6){
         tdAvgScore.classList.add('red');
-    }    
+    }
+    
   });
 };
 
 creartTable();
+
+const cellAverage = document.querySelector(".orange")
+const eventAverageScore = () => {
+  return alert("Hey! no puedes cambiar esta celda")
+}
+cellAverage.addEventListener("click", eventAverageScore)
+
+
+
+

@@ -1,3 +1,15 @@
+# Kodemia - DOM getElement and querySelector - Sesion 17
+
+This is a solution the exercises about sesion 17
+
+## Comments
+
+Manipulation DOM
+
+![](/17_sesion/img/sesion17.png)
+
+
+
 # Kodemia - DOM y manipulacion - Sesion 16
 
 This is a solution the exercises about sesion 16
