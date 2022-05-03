@@ -118,7 +118,80 @@ const mentorsArray = [
 //     tr.appendChild(td)    
 //     document.body.appendChild(tr)
 // }
-const table = document.createElement('table');
+
+
+//** Mi solucion */
+// const table = document.createElement('table');
+
+// mentorsArray.forEach((item) =>{
+//     //createNode(item.name)
+//     const tr  = document.createElement('tr');    
+//     const createNode = (name) => {
+      
+//         const td = document.createElement('td');
+//         const koderName = document.createTextNode(name);
+//         td.appendChild(koderName);
+//         tr.appendChild(td)
+//         table.appendChild(tr)    
+//         document.body.appendChild(table)
+//     }
+//     createNode(item.name)
+    
+//     item.scores.forEach((score) =>{
+//         if(item.name === item.name) {
+        
+//         const createNode2 = (name) => {
+      
+//             const td = document.createElement('td');
+//             const koderName = document.createTextNode(name);
+//             td.appendChild(koderName);
+//             tr.appendChild(td)    
+            
+//         }
+        
+//         createNode2(score.score)
+//     }         
+//     })  
+// })
+
+
+const creartTable = () => {
+    const table = document.createElement('table')
+    const thead = document.createElement('thead')
+    const tbody = document.createElement('tbody')
+    const trHead = document.createElement('tr')
+    
+    const thName = document.createElement('th')
+    const thHTML = document.createElement('th')
+    const thCSS = document.createElement('th')
+    const thJS = document.createElement('th')
+    const thReactJS = document.createElement('th')
+
+    const textName =document.createTextNode('Name')
+    const textHTML =document.createTextNode('HTML')
+    const textCSS =document.createTextNode('CSS')
+    const textJS =document.createTextNode('JS')
+    const textReactJs =document.createTextNode('ReactJs')
+
+    table.appendChild(thead)
+    table.appendChild(tbody)
+    thead.appendChild(trHead)
+    
+
+    trHead.appendChild(thName)
+    trHead.appendChild(thHTML)
+    trHead.appendChild(thCSS)    
+    trHead.appendChild(thJS)
+    trHead.appendChild(thReactJS)
+    
+    thName.appendChild(textName)
+    thHTML.appendChild(textHTML)
+    thCSS.appendChild(textCSS)
+    thJS.appendChild(textJS)
+    thReactJS.appendChild(textReactJs)
+
+    document.body.appendChild(table)
+
 
 mentorsArray.forEach((item) =>{
     //createNode(item.name)
@@ -151,4 +224,6 @@ mentorsArray.forEach((item) =>{
     })  
 })
 
+}
 
+creartTable()
