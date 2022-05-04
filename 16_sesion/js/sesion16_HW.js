@@ -236,17 +236,31 @@ const creartTable = () => {
     if(avgMentor<6){
         tdAvgScore.classList.add('red');
     }
+
+    const button = document.createElement('button');
+    button.classList.add('btn');
+    button.classList.add('btn-primary');
+    button.textContent ='seleccionar';
+    tr.appendChild(button);
+    
+    button.addEventListener('click', () => {
+      console.log("Promedio")
+      alert(`${item.name} tiene un promedio de  ${avgMentor}`)
+    })
+    
     
   });
 };
 
 creartTable();
 
-const cellAverage = document.querySelector(".orange")
-const eventAverageScore = () => {
-  return alert("Hey! no puedes cambiar esta celda")
-}
-cellAverage.addEventListener("click", eventAverageScore)
+
+
+// const cellAverage = document.querySelector(".orange")
+// const eventAverageScore = () => {
+//   return alert("Hey! no puedes cambiar esta celda")
+// }
+// cellAverage.addEventListener("click", eventAverageScore)
 
 
 
