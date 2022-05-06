@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Formulario</title>		
+	</head>
+	<body>
+		<!--
+			1. Formulario campos: Nombre, Apellidos y edad
+			2. Boton de enviar el formulario: eventos submit
+			3. Mostrar datos por pantalla 
+			4. Validación del formulario
+		-->
+		<h1>Formulario </h1>
+
+		<div class="box">
+			<form  id="formulario" <!--onsubmit="return false;"--></form>
+				<label for="nombre">Nombre:</label> <br/>
+				<input type="text" name="nombre" id="nombre" /> <br/>
+
+				<label for="apellidos">Apellidos:</label> <br/>
+				<input type="text" name="apellidos" id="apellidos" /> <br/>
+
+				<input type="submit" value="Enviar" id="submit" />
+			</form>
+		</div>
+
+		<div class="box2">
+			<h3>Información del usuario</h3>
+			<hr>
+			<p >
+				<span id="p_nombre"></span>
+                <span id="p_apellidos"></span>
+                
+			</p>
+		</div>
+        <script type="text/javascript" src="/19_sesion/js/formulario.js"></script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+
+.container{
+    width: 500px;
+    height: 300px;
+    background-color: #B0DCF9;
+    box-shadow: 10px 5px 5px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.col{
+   width: 100px;
+   height: 100px;
+   margin: 5px;
+   padding: 25px;
+   background-color: #00DB53;
+   border: 2px solid black;
+}
