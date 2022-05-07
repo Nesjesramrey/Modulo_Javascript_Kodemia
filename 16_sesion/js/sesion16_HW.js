@@ -106,6 +106,27 @@ const mentorsArray = [
       },
     ],
   },
+  {
+    name: "Pepito Potter Ron",
+    scores: [
+      {
+        signature: "HTML",
+        score: 8,
+      },
+      {
+        signature: "CSS",
+        score: 10,
+      },
+      {
+        signature: "JS",
+        score: 9,
+      },
+      {
+        signature: "ReactJS",
+        score: 10,
+      },
+    ],
+  },
 ];
 
 // const tr  = document.createElement('tr');
@@ -193,7 +214,7 @@ const creartTable = () => {
 
   document.body.appendChild(table);
 
-  mentorsArray.forEach((item) => {
+  mentorsArray.forEach((item, index) => {
     //createNode(item.name)
     const tr = document.createElement("tr");
     const createNode = (name) => {
@@ -206,7 +227,7 @@ const creartTable = () => {
     };
     createNode(item.name);
 
-    item.scores.forEach((score) => {
+    item.scores.forEach((score, index) => {
       {
         const createNode2 = (name) => {
           const tdSingleScore = document.createElement("td");
@@ -240,12 +261,19 @@ const creartTable = () => {
     const button = document.createElement('button');
     button.classList.add('btn');
     button.classList.add('btn-primary');
-    button.textContent ='seleccionar';
+    button.textContent ='Eliminar';
+    button.setAttribute("data-mentor", index)
     tr.appendChild(button);
-    
-    button.addEventListener('click', () => {
-      console.log("Promedio")
-      alert(`${item.name} tiene un promedio de  ${avgMentor}`)
+        
+    button.addEventListener('click', (event) => {
+      //const indexRemove = event.target.dataset.mentor;
+      //console.log(indexRemove)
+      //console.log("Promedio")
+      //alert(`${item.name} tiene un promedio de  ${avgMentor}`)
+      mentorsArray.splice(indexRemove, 1)
+      table.removeChild(tr)
+
+      console.log(mentorsArray)
     })
     
     

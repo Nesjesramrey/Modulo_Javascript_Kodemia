@@ -1,10 +1,10 @@
 const buttonSubmit = document.querySelector("#submit");
 const parrafo = document.querySelector('p');
 
-
+let arrayUsers =  []
 //se puede hacer con el submit, sin embargo al revisar en el formulario hay que poner el return onsubmit para que cargue la pagina
 buttonSubmit.addEventListener("click", () => {
-  console.log("evento capturado")
+  //console.log("evento capturado")
   const nombre = document.querySelector("#nombre").value;
   const apellidos = document.querySelector("#apellidos").value;
   
@@ -25,28 +25,49 @@ buttonSubmit.addEventListener("click", () => {
   const firstName = document.createTextNode(nombre);
   const lastName = document.createTextNode(` ${apellidos}`);
   buttonPerson.textContent =`Eliminar`;
+  //buttonPerson.setAttribute("data-mentor", index)
+  const newObject = {
+    name: nombre,
+    lastName: apellidos
+  } 
+  arrayUsers.push(newObject)
+  console.log(arrayUsers)
+
 
   spanPerson.appendChild(firstName);
   spanPerson.appendChild(lastName);
   spanPerson.appendChild(buttonPerson);
-  liPerson.appendChild(spanPerson)
-  liPerson.classList.add(`${nombre}`);  
+  liPerson.appendChild(spanPerson)  
   ulPerson.appendChild(liPerson)
   parrafo.appendChild(ulPerson)
-  //const nuevo = document.createTextNode("Uno nuevo");
-
+//const nuevo = document.createTextNode("Uno nuevo");
 //  person.appendChild(nuevo);
- // document.body.appendChild(parrafo);  
+// document.body.appendChild(parrafo);  
+// const buttonDelete = document.querySelectorAll(".delete");
+// console.log(buttonDelete)
+// buttonDelete.forEach(() => {buttonPerson.addEventListener("click", () => {
+//   console.log("evento capturado")
+//   ulPerson.removeChild(liPerson)  
+// })
+arrayUsers.forEach((item, index) => {
+  buttonPerson.setAttribute('data-indexB', index)
+})
+
+  buttonPerson.addEventListener("click", (event) => {
+    
+    const indexRemove = event.target.dataset.indexB;
+    
+    //console.log("evento capturado")
+  ulPerson.removeChild(liPerson)
+  arrayUsers.splice(indexRemove, 1)  
+  console.log(arrayUsers)
+})
 
 
 });
-const buttonDelete = document.querySelectorAll(".delete");
-console.log(buttonDelete)
-buttonDelete.forEach((button) =>{
-    button.addEventListener("click", () => {
-    console.log("evento capturado")  
-  })
-})
+
+
+
 
 
 
