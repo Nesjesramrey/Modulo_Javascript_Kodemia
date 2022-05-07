@@ -266,8 +266,8 @@ const creartTable = () => {
     tr.appendChild(button);
         
     button.addEventListener('click', (event) => {
-      //const indexRemove = event.target.dataset.mentor;
-      //console.log(indexRemove)
+      const indexRemove = event.target.dataset.mentor;
+      console.log(indexRemove)
       //console.log("Promedio")
       //alert(`${item.name} tiene un promedio de  ${avgMentor}`)
       mentorsArray.splice(indexRemove, 1)
