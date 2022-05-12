@@ -43,7 +43,7 @@
 // JSON.parse() transforma un Json en un objeto
 
 const URL_API = 'https://rickandmortyapi.com/api/character';
-const URL_FIREBASE = 'https://koders-88d77-default-rtdb.firebaseio.com/.json';
+const URL_FIREBASE = 'https://koders-88d77-default-rtdb.firebaseio.com/equipoWorldMenu.json';
 
 
 const xhr = new XMLHttpRequest();
