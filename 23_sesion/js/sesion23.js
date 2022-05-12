@@ -13,28 +13,38 @@ const onRequest = (person) => {
     xhr.send(JSON.stringify(person))
 }
 
-const onRequestDelete = (person) => {
+let arrayResponse = [];
+const onRequestDelete = () => {
     const xhr = new XMLHttpRequest();
+
     xhr.addEventListener('readystatechange',() =>{
+        
         if(xhr.readyState ===4){
             if(xhr.status === 200){
-                // const response = JSON.parse(xhr.response)
-                // for(let property in response ) {
-                //     response[property]
-                // }
-                console.log(xhr.response)
-            }
-        }
-    });
+                xhr.response
+                const response = JSON.parse(xhr.response)
+                //console.log(response)
+                for(let property in response) {
+                    //console.log(`${property}`);
+                   arrayResponse.push(property);
+                   //console.log(arrayResponse)
+                }
+                console.log(arrayResponse)                         
+            } 
+        }   
+    });  
+    console.log(arrayResponse)
 
-    //const hash = 
-    const URL_FIREBASEDELETE = 'https://koders-88d77-default-rtdb.firebaseio.com/equipoWorldMenu/.json'
-    const URL_FIREBASE = 'https://koders-88d77-default-rtdb.firebaseio.com/equipoWorldMenu/.json'
+    const URL_FIREBASE = 'https://koders-88d77-default-rtdb.firebaseio.com/equipoWorldMenu.json';
+    xhr.open('GET', URL_FIREBASE);
+    xhr.send()
 
+    //const URL_FIREBASE_DELETE = `https://koders-88d77-default-rtdb.firebaseio.com/equipoWorldMenu/${arrayResponse[0]}.json` 
+    //xhr.open('DELETE', URL_FIREBASE_DELETE); 
+     
     
-    xhr.open('DELETE', URL_FIREBASEDELETE);
-    xhr.send(JSON.stringify(person))
 }
+onRequestDelete()
 
 
 const inputs = document.querySelectorAll('.form-control');
