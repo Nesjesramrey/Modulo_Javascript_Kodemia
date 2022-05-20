@@ -1,6 +1,29 @@
 //**Excercise1 */
 
+// Find the smallest integer in the array
 
+// Given an array of integers your solution should find the smallest integer.
+
+// For example:
+
+//     Given [34, 15, 88, 2] your solution will return 2
+//     Given [34, -345, -1, 100] your solution will return -345
+
+// You can assume, for the purpose of this kata, that the supplied array will not be empty
+
+let arrayNumber = [-15,1,2,3,4,5,2]
+
+function numberMin(array){
+  
+let minimo = 0;
+for(let i=0, len = array.length; i > len; i--){
+    if(minimo > array[i]){
+        minimo = array[i];
+    }
+}console.log(minimo)
+}
+
+numberMin(arrayNumber)
 
 //**Exercise2 */
 
@@ -155,3 +178,336 @@ function sumNumbers(randomNumber) {
 }
 
 sumNumbers(numberRandom);
+
+
+//**7 exercise */
+
+// En este desafío tienes un array de números, usando la función map debes retornar todos los números del array multiplicados por dos.
+
+// La solución debería tener un input y output como los siguientes:
+
+// Input
+
+// solution([2, 4, 5, 6]);
+
+// Output
+
+// [4,8,10,12]
+
+//* Primera solucion
+let arrayMap = [2,4,5,6];
+const mult = arrayMap.map(function(value) {
+  return value *2
+})
+console.log(mult)
+
+
+//* Segunda solucion
+
+let arrayMap2 = [2,4,5,6];
+function solution(array) {
+  let newArray = [];
+  array.map((item) => {
+    newArray.push(item*2)
+  })
+  return newArray
+}
+console.log(solution(arrayMap2))
+
+
+//** exercise 8 */
+// En este desafío tienes un array de objetos que representan datos de personas con los siguientes atributos:
+
+// name
+// lastName
+// age
+// El reto aquí es retornar un array de strings con los nombres, la solución debería tener un input y output como los siguientes:
+
+// Input
+
+// solution([
+//   {
+//     name: 'Nicolas',
+//     lastName: 'Molina',
+//     age: 28
+//   },
+//   {
+//     name: 'Valentina',
+//     lastName: 'Molina',
+//     age: 19
+//   },
+//   ...
+// ]);
+
+// Output
+
+// ['Nicolas', 'Valentina']
+
+
+const solution = [
+    {
+      name: 'Nicolas',
+      lastName: 'Molina',
+      age: 28
+    },
+    {
+      name: 'Valentina',
+      lastName: 'Molina',
+      age: 19
+    },
+  ];
+
+
+function filterName(array) {
+  let arrayNames =[]
+  array.map((product, index, array) => {  
+  // Cómo solo queremos los nombres, retornamos "name".
+  arrayNames.push(product.name);
+})
+return arrayNames;
+}
+
+console.log(filterName(solution))
+
+
+//*exercise 9
+//* Tienes un array de productos con los siguientes atributos:
+
+// name
+// price
+// stock
+// Debes agregar y calcular una nueva propiedad llamada "taxes", los impuestos deben ser del 19% con base al precio base.
+
+// Por ejemplo si aplicamos el 19% de impuestos para un producto con precio de $1000 el resultado de los "taxes" será $190.
+
+// La solución debería tener un input y output como los siguientes:
+
+// solution([
+//   {
+//     name: "Product 1",
+//     price: 1000,
+//     stock: 10
+//   },
+//   {
+//     name: "Product 2",
+//     price: 2000,
+//     stock: 20
+//   },
+//   ...
+// ]);
+
+// Output
+
+// [
+//   {
+//     name: "Product 1",
+//     price: 1000,
+//     stock: 10,
+//     taxes: 190
+//   },
+//   {
+//     name: "Product 2",
+//     price: 2000,
+//     stock: 20,
+//     taxes: 380
+//   },
+//   ...
+// ]
+
+
+arrayArticles = [
+  {
+    name: "Product 1",
+    price: 1000,
+    stock: 10
+  },
+  {
+    name: "Product 2",
+    price: 2000,
+    stock: 20
+  }
+]
+
+function solution(array) { 
+  let newArrayArticles = [];
+  array.forEach((item) => {
+  
+  let taxes = item.price*0.19
+
+  const newDataArticles = {
+    name: item.name,
+    price: item.price,
+    stock: item.stock,
+    taxes: taxes
+}
+newArrayArticles.push(newDataArticles)
+})
+return newArrayArticles
+}
+
+console.log(solution(arrayArticles))
+
+
+
+//**exercise 10 */
+
+
+// 
+// Tienes un array con palabras, tu desafío es retornar un array solo con las que cumplan con la condición de tener 4 o más letras.
+
+// La solución debería tener un input y output como los siguientes:
+
+// solution(['amor', 'sol', 'piedra', 'día']);
+
+// Output
+
+// [ 'amor', 'piedra' ]
+
+const arrayWords = ['amor', 'sol', 'piedra', 'día'];
+
+
+function countWords(words) {
+  let newArray = [];
+  words.forEach((item) => {
+    if(item.length>= 4) {
+      newArray.push(item)
+    }
+  });return newArray;
+}
+
+console.log(countWords(arrayWords))
+
+
+
+//** exercise 11 */
+
+// Tienes un array de ordenes de compra con los siguientes atributos:
+
+// customerName: string
+// total: number
+// delivered: boolean
+// Debes filtrar todas las órdenes de compra que cumplan con la condición de tener un total mayor o igual a 100 y además que el estado delivered sea "true".
+
+// La solución debería tener un input y output como los siguientes:
+
+// solution([
+//   {
+//     customerName: "Nicolas",
+//     total: 100,
+//     delivered: true,
+//   },
+//   {
+//     customerName: "Zulema",
+//     total: 120,
+//     delivered: false,
+//   },
+//   ...
+// ]);
+
+// Output
+
+// [
+//   {
+//     customerName: "Nicolas",
+//     total: 100,
+//     delivered: true,
+//   },
+// ]
+
+
+const arrayCustomers = [
+  {
+    customerName: "Nicolas",
+    total: 100,
+    delivered: true,
+  },
+  {
+    customerName: "Zulema",
+    total: 120,
+    delivered: false,
+  }
+];
+
+function filterCustomers (array) {
+  let newArray = [];
+  array.forEach((item) => {
+  if(item.total >= 100 && item.delivered === true){
+    newArray.push(item)
+  } 
+}); return newArray;
+}
+
+// console.log(filterCustomers(arrayCustomers))
+
+
+// //**exercise 12 */
+
+// En este desafío vas a tener un string y debes buscar si ese string tiene un término de búsqueda, por ejemplo verificar si dentro de la frase "Ana lava la tina" está el término "ana" y si lo tiene retornar un true de lo contrario retornar un false, debes tener en cuenta que debe encontrar coincidencias, así la el término de búsqueda sea mayúscula o minúscula.
+
+// La solución debería tener un input y output como los siguientes:
+
+// solution("Ana lava la tina", "ana");
+// solution("Santiago", "tiago");
+// solution("Nicolas", "ana");
+
+// Output
+
+// true
+// true
+// false
+
+function solution(sentence, query){
+  return sentence.toLowerCase()
+  .includes(query.toLowerCase());
+}; 
+
+console.log(solution('Ana lava la tina', 'ana'))
+
+// ** exercise 13
+
+// Tu desafío es crear un buscador usando funciones como filter y includes, vas a tener array con palabras e tienes que retornar un array con sola las que cumplan con la condición de tener el parámetro de búsqueda.
+
+// La solución debería tener un input y output como los siguientes:
+
+// solution(["ana", "santi", "nico", "anastasia"], "an");
+// solution(["ana", "santi", "nico", "anastasia"], "xyz");
+
+// Output
+
+// ["ana", "santi", "anastasia"]
+// []
+
+
+let arrayNames = ["ana", "santi", "nico", "anastasia"]
+let word = 'an'
+
+function filterNames (array, names) {
+  return array.filter(words => words.includes(names))
+
+}
+console.log(filterNames(arrayNames, word))
+
+
+//* exercise 14
+
+// Tienes un array de números y debes retornar la suma de todos los valores en él.
+
+// La solución debería tener un input y output como los siguientes:
+
+// solution([1, 1, 1]);
+// solution([2, 4, 8]);
+
+// Output
+
+// 3
+// 14
+
+const arrayNumbers1 = [1,2,3]
+
+function acumNum (array) {
+  return array.reduce((count, item) => count + item, 0);
+  
+}
+
+console.log(acumNum(arrayNumbers1))
+
