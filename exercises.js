@@ -347,7 +347,13 @@ return newArrayArticles
 
 console.log(solution(arrayArticles))
 
-
+//** Otra solucion  */
+function solution(array){
+ 	return array.map(item => ({
+    ...item,
+    taxes: Math.trunc(item.price * .19)
+  }))
+}; 
 
 //**exercise 10 */
 
@@ -511,3 +517,104 @@ function acumNum (array) {
 
 console.log(acumNum(arrayNumbers1))
 
+
+//**exercise 15 */
+
+// Tienes un array de órdenes de compra con los siguientes atributos:
+
+// customerName: string
+// total: number
+// delivered: boolean
+// Debes retornar la suma total de todas las órdenes de compra.
+
+// La solución debería tener un input y output como los siguientes:
+
+// solution([
+//   {
+//     customerName: "Nicolas",
+//     total: 100,
+//     delivered: true,
+//   },
+//   {
+//     customerName: "Zulema",
+//     total: 120,
+//     delivered: false,
+//   },
+//   ...
+// ]);
+
+// Output
+
+// 220
+
+
+const arrayOrders = [
+  {
+    customerName: "Nicolas",
+    total: 100,
+    delivered: true,
+  },
+  {
+    customerName: "Zulema",
+    total: 120,
+    delivered: false,
+  },
+  
+];
+
+function solution(orders) {
+  let totalOrders = 0;
+ orders.forEach((item) => {
+  totalOrders += item.total
+ })
+ return totalOrders
+}; 
+
+console.log(solution(arrayOrders))
+
+
+//**exrcise 16 */
+
+// En este desafío tienes un array de números y debes retornar true si dentro de los números de ese array al menos uno es un número par.
+
+// La solución debería tener un input y output como los siguientes:
+
+// solution([1, 3, 5, 7, 10, 11]);
+// solution([1, 3, 5]);
+
+// Output
+
+// true
+// false
+
+
+const arrayParImpar = [1, 3, 5, 7, 11]
+function solution(numbers) {
+  const newArray = numbers.map((item) => {
+    return item%2
+  })
+     if(newArray.includes(0)){
+       return true
+     }else{ 
+      return false}
+  
+}; 
+
+console.log(solution(arrayParImpar))
+
+
+//** exercise 17
+
+// En este desafío tienes un array de números y debes retornar true si dentro de los números de ese array todos los números son pares.
+
+// La solución debería tener un input y output como los siguientes:
+
+// solution([2, 4, 6, 8, 10]);
+// solution([1, 3, 5, 7, 10, 11]);
+// solution([1, 3, 5]);
+
+// Output
+
+// true
+// false
+// false
