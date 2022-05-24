@@ -597,7 +597,6 @@ function solution(numbers) {
        return true
      }else{ 
       return false}
-  
 }; 
 
 console.log(solution(arrayParImpar))
@@ -618,3 +617,120 @@ console.log(solution(arrayParImpar))
 // true
 // false
 // false
+
+const arrayOnlyPar = [2, 4, 6, 8, 10]
+
+function solution(numbers) {
+  const newArray = numbers.map((item) => {
+    return item%2
+  })
+  function compare (item){
+    return item == 0;
+  }
+     if(newArray.every(compare)){
+       return true
+     }else{ 
+      return false} 
+}; 
+
+console.log(solution(arrayOnlyPar))
+
+
+//**exercise 18 */
+
+// Dado un array de string que son nombres de cartas de poker debes retornar la palabra "AS" si dentro de tu baraja tienes un "AS" y un false si no lo tienes.
+
+// La solución debería tener un input y output como los siguientes:
+
+// solution(['diamonds', 'hearts', 'spades', 'AS']);
+// solution(['diamonds', 'hearts', 'spades']);
+
+// Output
+
+// "AS"
+// false
+
+const arrayPoker = ['diamonds', 'hearts', 'spades', 'AS']
+function solution(cards) {
+     if(cards.includes("AS")){
+       return "AS"
+     }else{ 
+      return false}
+}; 
+
+console.log(solution(arrayPoker))
+
+
+// **exercise 19
+
+// Dado un array de strings existe la palabra clave "myKey" y debes retornar la posición dentro del array en donde se encuentra este string y si no está debes retornan un false.
+
+// La solución debería tener un input y output como los siguientes:
+
+// solution(["diamonds", "myKey", "spades", "AS"]);
+// solution(["diamonds", "hearts", "spades"]);
+// solution(["myKey", "hearts", "spades"]);
+
+// Output
+
+// 1
+// false
+// 0
+
+
+const arrayWords2 = ["diamonds", "hearts", "spades"]
+function solution(words) {
+  const newArray = words.map((item, index) => {
+    return item
+  })
+  if(newArray.includes("myKey")){
+    return newArray.indexOf('myKey')
+  }else{ 
+   return false} 
+}; 
+
+console.log(solution(arrayWords2))
+
+
+// ** exercise 20
+
+// En este desafío vas a recibir un array de string y debes retornar un string en donde cada elemento del array esté separado por comas.
+
+// La solución debería tener un input y output como los siguientes:
+
+// solution(["amor", "sol", "piedra", "día"]);
+// solution(["diamonds", "hearts", "spades"]);
+
+// Output
+
+// "amor,sol,piedra,día"
+// "diamonds,hearts,spades"
+
+const arraytoString = ["amor", "sol", "piedra", "día"];
+
+function solution(words) {
+  return words.toString() 
+}; 
+
+console.log(solution(arraytoString))
+
+
+//**exercise 21 */
+
+// En este desafío vas a recibir el título de un artículo y tú debes transformarlo en un formato de URL en donde normalmente se transforma todo en minúscula y se cambian los espacios por un guion (-), por ejemplo: Curso de arrays => curso-de-arrays
+
+// La solución debería tener un input y output como los siguientes:
+
+// solution("La forma de correr Python");
+// solution("La API para nunca parar de aprender");
+// solution("Curso de arrays");
+
+// Output
+
+// "la-forma-de-correr-python"
+// "la-api-para-nunca-parar-de-aprender"
+// "curso-de-arrays"
+
+function solution(title){
+  return title.split(' ').join('-').toLowerCase();
+}; 
