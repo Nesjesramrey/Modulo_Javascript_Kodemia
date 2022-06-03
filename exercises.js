@@ -734,3 +734,179 @@ console.log(solution(arraytoString))
 function solution(title){
   return title.split(' ').join('-').toLowerCase();
 }; 
+
+//**exercise 22 */
+
+// En este desafío recibirás dos arrays de números como parámetros de entrada y debes retornar un array que tenga los dos arrays unidos.
+
+// La solución debería tener un input y output como los siguientes:
+
+// Input
+
+// solution([1, 2, 3], [4, 5, 6]);
+// solution(["A", "B", "C"], ["D", "E", "H"]);
+
+// Output
+
+// [1, 2, 3, 4, 5 , 6]
+// ["A", "B", "C", "D", "E", "H"]
+
+array1 = [1, 2, 3];
+array2 = [4, 5, 6];
+function concatArray(array1, array2) {
+  const newArray = array1.concat(array2);
+  return newArray;
+}
+
+
+console.log(concatArray(array1, array2))
+
+//**exercise 23 */
+
+// En este desafío tienes un array que contiene otros arrays internos, debes retornar un array que tenga los elementos de los otros arrays eliminando los arrays internos y dejando solo los valores, normalmente a esto le llamamos aplanar el array o "Flattening Algorithm".
+
+// La solución debería tener un input y output como los siguientes:
+
+// Input
+
+// solution([
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ]);
+
+// Output
+
+// [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+let joinArray1 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+  ]
+
+const newArray = joinArray1.map((item) => {
+    const newArray = joinArray1[0].concat(joinArray1[1], joinArray1[2])
+    return newArray;
+  })
+
+console.log(newArray);
+
+//solucion correcta
+let joinArray2 = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+]
+function solution(array){
+  return array.flat();
+}; 
+
+console.log(solution(joinArray2))
+
+//** exercise 24 */
+
+// En este desafío tienes array de strings y cada línea es un fragmento, el Zen de Python, tu reto es hacer un método que retorne el número de palabras totales que tiene el array.
+
+// La solución debería tener un input y output como los siguientes:
+
+// Input
+
+// solution([
+//   "Beautiful is better than ugly",
+//   "Explicit is better than implicit",
+//   "Simple is better than complex",
+//   "Complex is better than complicated",
+// ]);
+
+// Output
+
+// 20
+
+arrayWords = [
+  "Beautiful is better than ugly",
+  "Explicit is better than implicit",
+  "Simple is better than complex",
+  "Complex is better than complicated",
+];
+
+const countWords = arrayWords.map((item) => { 
+  newArray= [];
+  newArray += item.split(" ");
+  return newArray
+})
+
+console.log(countWords)
+
+//solucion correcta
+let arrayWords3 = [
+  "Beautiful is better than ugly",
+  "Explicit is better than implicit",
+  "Simple is better than complex",
+  "Complex is better than complicated",
+];
+function solution(lines){
+  return lines.flatMap(line => line.split(' ')).length;
+}; 
+
+console.log(solution(arrayWords3))
+
+//** exercise 25 */
+
+// En este desafío tienes un array de números el cual va a tener tanto números negativos como positivos y el reto es usando la función sort de JavaScript ordenarlos de mayor a menor.
+
+// La solución debería tener un input y output como los siguientes:
+
+// Input
+
+// solution([3, 1, 11, 5, 2, 7, 8]);
+
+// Output
+
+// [ 11, 8, 7, 5, 3, 2, 1 ]
+
+let arrayNumber1 = [3, 1, 11, 5, 2, 7, 8]
+
+function sortArray (arrayNumber){
+  let newArray = arrayNumber.sort(function (a,b){return a-b})
+  return newArray;
+}
+
+console.log(sortArray(arrayNumber1))
+
+
+//**exercise 26 */
+
+// Tienes un array con palabras y tienes que retornar un array ordenado de la palabra con menos caracteres a la palabra con más caracteres.
+
+// La solución debería funcionar algo similar:
+
+// solution([
+//   "Hola",
+//   "Viajar",
+//   "Sol",
+//   "Aprender"
+// ]);
+
+// Output
+
+// [
+//   "Sol",
+//   "Hola",
+//   "Viajar",
+//   "Aprender"
+// ]
+
+const arrayWords1 = [
+    "Hola",
+    "Viajar",
+    "Sol",
+    "Aprender"
+  ]
+
+function orderArray (arrayWords) {
+  let newArray = arrayWords.sort(function (a,b){return a.length-b.length})
+  return newArray;
+}
+
+console.log(orderArray(arrayWords1))
